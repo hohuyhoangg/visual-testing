@@ -1,0 +1,32 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,,,,2022-04-07 11:59:10,2022-04-07 11:59:35,25.012s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 11:59:10,2022-04-07 11:59:26,16.001s,FAILED
+"comment(""Story: Login to CURA system"")",,,,2022-04-07 11:59:12,2022-04-07 11:59:12,0.134s,PASSED
+"comment(""Given that the user has the valid login information"")",,,,2022-04-07 11:59:12,2022-04-07 11:59:12,0.013s,PASSED
+openBrowser(G_SiteURL),,,,2022-04-07 11:59:12,2022-04-07 11:59:23,11.314s,FAILED
+Start listener action : terminateRunningWebDrivers,,,,2022-04-07 11:59:23,2022-04-07 11:59:24,0.560s,PASSED
+Video,,,,2022-04-07 11:59:26,2022-04-07 11:59:26,0.000s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 11:59:26,2022-04-07 11:59:35,8.522s,FAILED
+"comment(""Story: Book an appointment"")",,,,2022-04-07 11:59:27,2022-04-07 11:59:27,0.028s,PASSED
+"comment(""Given that the user has logged into their account"")",,,,2022-04-07 11:59:27,2022-04-07 11:59:27,0.017s,PASSED
+openBrowser(G_SiteURL),,,,2022-04-07 11:59:27,2022-04-07 11:59:32,5.245s,FAILED
+Start listener action : terminateRunningWebDrivers,,,,2022-04-07 11:59:32,2022-04-07 11:59:32,0.107s,PASSED
+Video,,,,2022-04-07 11:59:35,2022-04-07 11:59:35,0.001s,PASSED

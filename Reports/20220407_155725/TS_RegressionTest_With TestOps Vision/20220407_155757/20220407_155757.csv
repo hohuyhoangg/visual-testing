@@ -1,0 +1,68 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Firefox 98.0,,,2022-04-07 15:59:05,2022-04-07 16:00:00,54.554s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Firefox 98.0,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 15:59:06,2022-04-07 15:59:26,20.642s,PASSED
+"comment(""Story: Login to CURA system"")",Firefox 98.0,,,2022-04-07 15:59:07,2022-04-07 15:59:07,0.160s,PASSED
+"comment(""Given that the user has the valid login information"")",Firefox 98.0,,,2022-04-07 15:59:07,2022-04-07 15:59:07,0.013s,PASSED
+openBrowser(G_SiteURL),Firefox 98.0,,,2022-04-07 15:59:07,2022-04-07 15:59:18,10.649s,PASSED
+maximizeWindow(),Firefox 98.0,,,2022-04-07 15:59:18,2022-04-07 15:59:18,0.531s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Firefox 98.0,,,2022-04-07 15:59:18,2022-04-07 15:59:19,0.812s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Firefox 98.0,,,2022-04-07 15:59:19,2022-04-07 15:59:20,1.026s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Firefox 98.0,,,2022-04-07 15:59:20,2022-04-07 15:59:21,0.581s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Firefox 98.0,,,2022-04-07 15:59:21,2022-04-07 15:59:21,0.535s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Firefox 98.0,,,2022-04-07 15:59:21,2022-04-07 15:59:22,0.629s,PASSED
+"comment(""When he logins to CURA system"")",Firefox 98.0,,,2022-04-07 15:59:22,2022-04-07 15:59:22,0.004s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Firefox 98.0,,,2022-04-07 15:59:22,2022-04-07 15:59:23,1.011s,PASSED
+"comment(""Then he should be able to login successfully"")",Firefox 98.0,,,2022-04-07 15:59:23,2022-04-07 15:59:23,0.004s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Firefox 98.0,,,2022-04-07 15:59:23,2022-04-07 15:59:23,0.488s,PASSED
+closeBrowser(),Firefox 98.0,,,2022-04-07 15:59:23,2022-04-07 15:59:24,0.803s,PASSED
+Start listener action : terminateRunningWebDrivers,Firefox 98.0,,,2022-04-07 15:59:24,2022-04-07 15:59:24,0.070s,PASSED
+Video,Firefox 98.0,,,2022-04-07 15:59:26,2022-04-07 15:59:26,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Firefox 98.0,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 15:59:26,2022-04-07 16:00:00,33.546s,PASSED
+"comment(""Story: Book an appointment"")",Firefox 98.0,,,2022-04-07 15:59:27,2022-04-07 15:59:27,0.004s,PASSED
+"comment(""Given that the user has logged into their account"")",Firefox 98.0,,,2022-04-07 15:59:27,2022-04-07 15:59:27,0.004s,PASSED
+openBrowser(G_SiteURL),Firefox 98.0,,,2022-04-07 15:59:27,2022-04-07 15:59:36,8.879s,PASSED
+maximizeWindow(),Firefox 98.0,,,2022-04-07 15:59:36,2022-04-07 15:59:36,0.517s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Firefox 98.0,,,2022-04-07 15:59:36,2022-04-07 15:59:40,3.970s,PASSED
+"comment(""And Appointment page is displayed"")",Firefox 98.0,,,2022-04-07 15:59:40,2022-04-07 15:59:40,0.004s,PASSED
+"takeElementScreenshotAsCheckpoint(""Appointment Dialog Origin"", AppointmentDialogObject)",Firefox 98.0,,,2022-04-07 15:59:40,2022-04-07 15:59:41,0.849s,PASSED
+"selectOptionByLabel(findTestObject(""Page_CuraAppointment/lst_Facility""), ""Hongkong CURA Healthcare Center"", false)",Firefox 98.0,,,2022-04-07 15:59:41,2022-04-07 15:59:42,0.765s,PASSED
+"takeElementScreenshotAsCheckpoint(""Facilty"", FacilityObject)",Firefox 98.0,,,2022-04-07 15:59:42,2022-04-07 15:59:42,0.507s,PASSED
+"check(findTestObject(""Page_CuraAppointment/chk_Medicaid""))",Firefox 98.0,,,2022-04-07 15:59:42,2022-04-07 15:59:43,0.499s,PASSED
+"takeElementScreenshotAsCheckpoint(""Medicare"", MedicareChoicesObject)",Firefox 98.0,,,2022-04-07 15:59:43,2022-04-07 15:59:43,0.422s,PASSED
+"check(findTestObject(""Page_CuraAppointment/chk_Readmission""))",Firefox 98.0,,,2022-04-07 15:59:43,2022-04-07 15:59:44,0.491s,PASSED
+"setText(findTestObject(""Page_CuraAppointment/txt_VisitDate""), ""27/12/2016"")",Firefox 98.0,,,2022-04-07 15:59:44,2022-04-07 15:59:45,0.823s,PASSED
+click(CommentLabelObject),Firefox 98.0,,,2022-04-07 15:59:45,2022-04-07 15:59:45,0.657s,PASSED
+"takeElementScreenshotAsCheckpoint(""Visit Date"", DateObject)",Firefox 98.0,,,2022-04-07 15:59:45,2022-04-07 15:59:46,0.430s,PASSED
+"setText(findTestObject(""Page_CuraAppointment/txt_Comment""), ""Please make appointment as soon as possible."")",Firefox 98.0,,,2022-04-07 15:59:46,2022-04-07 15:59:46,0.542s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Firefox 98.0,,,2022-04-07 15:59:46,2022-04-07 15:59:46,0.003s,PASSED
+"takeElementScreenshotAsCheckpoint(""Appointment Dialog With Data"", AppointmentDialogObject)",Firefox 98.0,,,2022-04-07 15:59:46,2022-04-07 15:59:47,0.669s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Firefox 98.0,,,2022-04-07 15:59:47,2022-04-07 15:59:48,0.617s,PASSED
+"takeFullPageScreenshotAsCheckpoint(""Review Appoitment"")",Firefox 98.0,,,2022-04-07 15:59:48,2022-04-07 15:59:53,5.486s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Firefox 98.0,,,2022-04-07 15:59:53,2022-04-07 15:59:53,0.451s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Firefox 98.0,,,2022-04-07 15:59:53,2022-04-07 15:59:53,0.004s,PASSED
+"verifyMatch(""Hongkong CURA Healthcare Center"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Facility"")), false)",Firefox 98.0,,,2022-04-07 15:59:53,2022-04-07 15:59:54,0.372s,PASSED
+"verifyMatch(""Yes"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_HospitalReadmission"")), false)",Firefox 98.0,,,2022-04-07 15:59:54,2022-04-07 15:59:54,0.286s,PASSED
+"verifyMatch(""Medicaid"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Program"")), false)",Firefox 98.0,,,2022-04-07 15:59:54,2022-04-07 15:59:54,0.268s,PASSED
+"verifyMatch(""27/12/2016"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_VisitDate"")), false)",Firefox 98.0,,,2022-04-07 15:59:54,2022-04-07 15:59:55,0.278s,PASSED
+"verifyMatch(""Please make appointment as soon as possible."", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Comment"")), false)",Firefox 98.0,,,2022-04-07 15:59:55,2022-04-07 15:59:55,0.289s,PASSED
+closeBrowser(),Firefox 98.0,,,2022-04-07 15:59:55,2022-04-07 15:59:56,0.769s,PASSED
+Start listener action : terminateRunningWebDrivers,Firefox 98.0,,,2022-04-07 15:59:56,2022-04-07 15:59:58,1.958s,PASSED
+Video,Firefox 98.0,,,2022-04-07 16:00:00,2022-04-07 16:00:00,0.001s,PASSED

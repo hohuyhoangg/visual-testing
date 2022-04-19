@@ -1,0 +1,35 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Chrome 100.0.4896.75,,,2022-04-07 13:50:48,2022-04-07 13:52:23,1m - 34.697s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 13:50:49,2022-04-07 13:52:05,1m - 16.313s,FAILED
+"comment(""Story: Login to CURA system"")",Chrome 100.0.4896.75,,,2022-04-07 13:50:51,2022-04-07 13:50:51,0.172s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 100.0.4896.75,,,2022-04-07 13:50:51,2022-04-07 13:50:51,0.006s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 13:50:51,2022-04-07 13:51:55,1m - 3.913s,PASSED
+maximizeWindow(),Chrome 100.0.4896.75,,,2022-04-07 13:51:55,2022-04-07 13:51:56,0.562s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 100.0.4896.75,,,2022-04-07 13:51:56,2022-04-07 13:51:58,2.000s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Chrome 100.0.4896.75,,,2022-04-07 13:51:58,2022-04-07 13:52:02,4.216s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 13:52:02,2022-04-07 13:52:03,0.711s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 13:52:05,2022-04-07 13:52:05,0.002s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 13:52:05,2022-04-07 13:52:23,17.830s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 100.0.4896.75,,,2022-04-07 13:52:16,2022-04-07 13:52:16,0.028s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 100.0.4896.75,,,2022-04-07 13:52:16,2022-04-07 13:52:16,0.010s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 13:52:16,2022-04-07 13:52:21,4.365s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 13:52:21,2022-04-07 13:52:21,0.497s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 13:52:23,2022-04-07 13:52:23,0.001s,PASSED

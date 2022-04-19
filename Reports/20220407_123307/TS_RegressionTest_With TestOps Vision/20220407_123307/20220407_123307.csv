@@ -1,0 +1,43 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Chrome 100.0.4896.75,,,2022-04-07 12:33:39,2022-04-07 12:34:15,35.910s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 12:33:39,2022-04-07 12:34:05,25.897s,PASSED
+"comment(""Story: Login to CURA system"")",Chrome 100.0.4896.75,,,2022-04-07 12:33:41,2022-04-07 12:33:41,0.161s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 100.0.4896.75,,,2022-04-07 12:33:41,2022-04-07 12:33:41,0.007s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 12:33:41,2022-04-07 12:33:53,11.564s,PASSED
+maximizeWindow(),Chrome 100.0.4896.75,,,2022-04-07 12:33:53,2022-04-07 12:33:53,0.230s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 100.0.4896.75,,,2022-04-07 12:33:53,2022-04-07 12:33:54,0.985s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Chrome 100.0.4896.75,,,2022-04-07 12:33:54,2022-04-07 12:33:56,1.475s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Chrome 100.0.4896.75,,,2022-04-07 12:33:56,2022-04-07 12:33:57,1.685s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Chrome 100.0.4896.75,,,2022-04-07 12:33:57,2022-04-07 12:33:58,0.834s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Chrome 100.0.4896.75,,,2022-04-07 12:33:58,2022-04-07 12:34:00,1.653s,PASSED
+"comment(""When he logins to CURA system"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:00,2022-04-07 12:34:00,0.008s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 100.0.4896.75,,,2022-04-07 12:34:00,2022-04-07 12:34:01,1.260s,PASSED
+"comment(""Then he should be able to login successfully"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:01,2022-04-07 12:34:01,0.004s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Chrome 100.0.4896.75,,,2022-04-07 12:34:01,2022-04-07 12:34:02,0.443s,PASSED
+closeBrowser(),Chrome 100.0.4896.75,,,2022-04-07 12:34:02,2022-04-07 12:34:03,1.464s,PASSED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 12:34:03,2022-04-07 12:34:03,0.111s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 12:34:05,2022-04-07 12:34:05,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 12:34:05,2022-04-07 12:34:15,9.330s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:07,2022-04-07 12:34:07,0.008s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:07,2022-04-07 12:34:07,0.008s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 12:34:07,2022-04-07 12:34:12,5.591s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 12:34:12,2022-04-07 12:34:13,0.183s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 12:34:15,2022-04-07 12:34:15,0.001s,PASSED

@@ -1,0 +1,32 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Chrome 100.0.4896.75,,,2022-04-07 13:51:16,2022-04-07 13:52:20,1m - 3.767s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 13:51:18,2022-04-07 13:52:05,46.998s,FAILED
+"comment(""Story: Login to CURA system"")",Chrome 100.0.4896.75,,,2022-04-07 13:51:22,2022-04-07 13:51:22,0.253s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 100.0.4896.75,,,2022-04-07 13:51:22,2022-04-07 13:51:22,0.010s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 13:51:22,2022-04-07 13:52:02,40.022s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 13:52:02,2022-04-07 13:52:03,0.734s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 13:52:05,2022-04-07 13:52:05,0.005s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 13:52:05,2022-04-07 13:52:20,14.852s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 100.0.4896.75,,,2022-04-07 13:52:13,2022-04-07 13:52:13,0.036s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 100.0.4896.75,,,2022-04-07 13:52:13,2022-04-07 13:52:13,0.196s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 13:52:13,2022-04-07 13:52:17,4.379s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 13:52:17,2022-04-07 13:52:18,0.508s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 13:52:20,2022-04-07 13:52:20,0.001s,PASSED

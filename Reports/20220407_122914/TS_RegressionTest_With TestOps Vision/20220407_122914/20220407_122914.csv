@@ -1,0 +1,40 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Edge Chromium 100,,,2022-04-07 12:29:47,2022-04-07 12:30:33,46.835s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Edge Chromium 100,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 12:29:48,2022-04-07 12:30:23,35.258s,FAILED
+"comment(""Story: Login to CURA system"")",Edge Chromium 100,,,2022-04-07 12:29:52,2022-04-07 12:29:52,0.429s,PASSED
+"comment(""Given that the user has the valid login information"")",Edge Chromium 100,,,2022-04-07 12:29:52,2022-04-07 12:29:52,0.005s,PASSED
+openBrowser(G_SiteURL),Edge Chromium 100,,,2022-04-07 12:29:52,2022-04-07 12:30:12,19.634s,PASSED
+maximizeWindow(),Edge Chromium 100,,,2022-04-07 12:30:12,2022-04-07 12:30:12,0.333s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Edge Chromium 100,,,2022-04-07 12:30:12,2022-04-07 12:30:13,0.845s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Edge Chromium 100,,,2022-04-07 12:30:13,2022-04-07 12:30:15,1.910s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Edge Chromium 100,,,2022-04-07 12:30:15,2022-04-07 12:30:16,0.736s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Edge Chromium 100,,,2022-04-07 12:30:16,2022-04-07 12:30:16,0.500s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Edge Chromium 100,,,2022-04-07 12:30:16,2022-04-07 12:30:18,1.422s,PASSED
+"comment(""When he logins to CURA system"")",Edge Chromium 100,,,2022-04-07 12:30:18,2022-04-07 12:30:18,0.064s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Edge Chromium 100,,,2022-04-07 12:30:18,2022-04-07 12:30:21,2.992s,FAILED
+Start listener action : terminateRunningWebDrivers,Edge Chromium 100,,,2022-04-07 12:30:21,2022-04-07 12:30:21,0.127s,PASSED
+Video,Edge Chromium 100,,,2022-04-07 12:30:23,2022-04-07 12:30:23,0.002s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Edge Chromium 100,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 12:30:23,2022-04-07 12:30:33,10.491s,FAILED
+"comment(""Story: Book an appointment"")",Edge Chromium 100,,,2022-04-07 12:30:27,2022-04-07 12:30:27,0.089s,PASSED
+"comment(""Given that the user has logged into their account"")",Edge Chromium 100,,,2022-04-07 12:30:27,2022-04-07 12:30:27,0.008s,PASSED
+openBrowser(G_SiteURL),Edge Chromium 100,,,2022-04-07 12:30:27,2022-04-07 12:30:31,4.281s,FAILED
+Start listener action : terminateRunningWebDrivers,Edge Chromium 100,,,2022-04-07 12:30:31,2022-04-07 12:30:31,0.148s,PASSED
+Video,Edge Chromium 100,,,2022-04-07 12:30:33,2022-04-07 12:30:33,0.001s,PASSED

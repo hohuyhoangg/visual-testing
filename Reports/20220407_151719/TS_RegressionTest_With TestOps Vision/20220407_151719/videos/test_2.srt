@@ -1,0 +1,16 @@
+1
+00:00:00,482 --> 00:00:00,488
+1. comment("Story: Book an appointment")
+
+2
+00:00:00,490 --> 00:00:00,496
+5. comment("Given that the user has logged into their account")
+
+3
+00:00:00,498 --> 00:00:04,614
+9. openBrowser(G_SiteURL)
+
+4
+00:00:04,615 --> 00:00:04,730
+1. cleanup()
+

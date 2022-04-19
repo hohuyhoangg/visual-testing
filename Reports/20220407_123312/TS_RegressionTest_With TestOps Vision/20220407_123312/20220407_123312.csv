@@ -1,0 +1,38 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Chrome 100.0.4896.75,,,2022-04-07 12:33:43,2022-04-07 12:34:21,38.413s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-07 12:33:44,2022-04-07 12:34:14,29.888s,FAILED
+"comment(""Story: Login to CURA system"")",Chrome 100.0.4896.75,,,2022-04-07 12:33:46,2022-04-07 12:33:46,0.462s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 100.0.4896.75,,,2022-04-07 12:33:46,2022-04-07 12:33:46,0.047s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 12:33:46,2022-04-07 12:33:57,10.843s,PASSED
+maximizeWindow(),Chrome 100.0.4896.75,,,2022-04-07 12:33:57,2022-04-07 12:33:57,0.160s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 100.0.4896.75,,,2022-04-07 12:33:57,2022-04-07 12:33:58,1.068s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Chrome 100.0.4896.75,,,2022-04-07 12:33:58,2022-04-07 12:34:00,1.941s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Chrome 100.0.4896.75,,,2022-04-07 12:34:00,2022-04-07 12:34:02,1.514s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Chrome 100.0.4896.75,,,2022-04-07 12:34:02,2022-04-07 12:34:03,1.000s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Chrome 100.0.4896.75,,,2022-04-07 12:34:03,2022-04-07 12:34:11,8.510s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 12:34:11,2022-04-07 12:34:11,0.169s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 12:34:14,2022-04-07 12:34:14,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Chrome 100.0.4896.75,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-07 12:34:14,2022-04-07 12:34:21,7.857s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:15,2022-04-07 12:34:15,0.008s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 100.0.4896.75,,,2022-04-07 12:34:15,2022-04-07 12:34:15,0.007s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.75,,,2022-04-07 12:34:15,2022-04-07 12:34:19,4.088s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.75,,,2022-04-07 12:34:19,2022-04-07 12:34:19,0.151s,PASSED
+Video,Chrome 100.0.4896.75,,,2022-04-07 12:34:21,2022-04-07 12:34:21,0.000s,PASSED
