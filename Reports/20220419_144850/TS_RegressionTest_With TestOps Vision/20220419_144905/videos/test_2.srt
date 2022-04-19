@@ -1,0 +1,136 @@
+1
+00:00:00,655 --> 00:00:00,659
+1. comment("Story: Book an appointment")
+
+2
+00:00:00,662 --> 00:00:00,682
+5. comment("Given that the user has logged into their account")
+
+3
+00:00:00,683 --> 00:00:08,494
+9. openBrowser(G_SiteURL)
+
+4
+00:00:08,496 --> 00:00:08,650
+13. maximizeWindow()
+
+5
+00:00:08,652 --> 00:00:08,964
+17. callTestCase(findTestCase("Common Test Cases/Login"), ["Username":"John Doe", "Password":"ThisIsNotAPassword"], STOP_ON_FAILURE)
+
+6
+00:00:08,965 --> 00:00:09,908
+1. click(findTestObject("Page_CuraHomepage/btn_MakeAppointment"))
+
+7
+00:00:09,909 --> 00:00:10,931
+5. setText(findTestObject("Page_Login/txt_UserName"), Username)
+
+8
+00:00:10,932 --> 00:00:11,664
+9. setText(findTestObject("Page_Login/txt_Password"), Password)
+
+9
+00:00:11,665 --> 00:00:12,757
+13. click(findTestObject("Page_Login/btn_Login"))
+
+10
+00:00:12,757 --> 00:00:13,070
+17. landingPage = verifyElementPresent(findTestObject("Page_CuraAppointment/div_Appointment"), G_Timeout)
+
+11
+00:00:13,071 --> 00:00:13,073
+21. comment("And Appointment page is displayed")
+
+12
+00:00:13,074 --> 00:00:14,106
+25. takeElementScreenshotAsCheckpoint("Appointment Dialog Origin", AppointmentDialogObject)
+
+13
+00:00:14,125 --> 00:00:14,733
+29. selectOptionByLabel(findTestObject("Page_CuraAppointment/lst_Facility"), "Hongkong CURA Healthcare Center", false)
+
+14
+00:00:14,734 --> 00:00:15,424
+33. takeElementScreenshotAsCheckpoint("Facilty", FacilityObject)
+
+15
+00:00:15,425 --> 00:00:15,769
+37. check(findTestObject("Page_CuraAppointment/chk_Medicaid"))
+
+16
+00:00:15,770 --> 00:00:16,655
+41. takeElementScreenshotAsCheckpoint("Medicare", MedicareChoicesObject)
+
+17
+00:00:16,656 --> 00:00:17,076
+45. check(findTestObject("Page_CuraAppointment/chk_Readmission"))
+
+18
+00:00:17,077 --> 00:00:17,897
+49. setText(findTestObject("Page_CuraAppointment/txt_VisitDate"), "27/12/2016")
+
+19
+00:00:17,898 --> 00:00:18,472
+53. click(CommentLabelObject)
+
+20
+00:00:18,474 --> 00:00:19,278
+57. takeElementScreenshotAsCheckpoint("Visit Date", DateObject)
+
+21
+00:00:19,279 --> 00:00:20,010
+61. setText(findTestObject("Page_CuraAppointment/txt_Comment"), "Please make appointment as soon as possible.")
+
+22
+00:00:20,011 --> 00:00:20,014
+65. comment("When he fills in valid information in Appointment page")
+
+23
+00:00:20,015 --> 00:00:20,885
+69. takeElementScreenshotAsCheckpoint("Appointment Dialog With Data", AppointmentDialogObject)
+
+24
+00:00:20,887 --> 00:00:21,658
+73. click(findTestObject("Page_CuraAppointment/btn_BookAppointment"))
+
+25
+00:00:21,659 --> 00:00:26,623
+77. takeFullPageScreenshotAsCheckpoint("Review Appoitment")
+
+26
+00:00:26,624 --> 00:00:27,021
+81. verifyTextPresent("Appointment Confirmation", false)
+
+27
+00:00:27,022 --> 00:00:27,025
+85. comment("Then he should be able to book a new appointment")
+
+28
+00:00:27,027 --> 00:00:27,363
+89. verifyMatch("Hongkong CURA Healthcare Center", getText(findTestObject("Page_AppointmentConfirmation/lbl_Facility")), false)
+
+29
+00:00:27,364 --> 00:00:27,760
+93. verifyMatch("Yes", getText(findTestObject("Page_AppointmentConfirmation/lbl_HospitalReadmission")), false)
+
+30
+00:00:27,761 --> 00:00:28,166
+97. verifyMatch("Medicaid", getText(findTestObject("Page_AppointmentConfirmation/lbl_Program")), false)
+
+31
+00:00:28,167 --> 00:00:28,655
+101. verifyMatch("27/12/2016", getText(findTestObject("Page_AppointmentConfirmation/lbl_VisitDate")), false)
+
+32
+00:00:28,656 --> 00:00:29,165
+105. verifyMatch("Please make appointment as soon as possible.", getText(findTestObject("Page_AppointmentConfirmation/lbl_Comment")), false)
+
+33
+00:00:29,166 --> 00:00:30,449
+109. closeBrowser()
+
+34
+00:00:30,450 --> 00:00:30,592
+1. cleanup()
+
