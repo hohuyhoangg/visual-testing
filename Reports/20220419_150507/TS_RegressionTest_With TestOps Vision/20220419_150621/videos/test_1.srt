@@ -1,0 +1,16 @@
+1
+00:00:00,598 --> 00:00:00,692
+1. comment("Story: Login to CURA system")
+
+2
+00:00:00,703 --> 00:00:00,709
+5. comment("Given that the user has the valid login information")
+
+3
+00:00:00,710 --> 00:00:04,845
+9. openBrowser(G_SiteURL)
+
+4
+00:00:04,847 --> 00:00:04,959
+1. cleanup()
+

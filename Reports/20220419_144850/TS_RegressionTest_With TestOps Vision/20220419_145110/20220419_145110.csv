@@ -1,0 +1,47 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Chrome 100.0.4896.127,,,2022-04-19 14:57:54,2022-04-19 14:58:29,34.705s,FAILED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Chrome 100.0.4896.127,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-19 14:57:55,2022-04-19 14:58:14,19.339s,PASSED
+"comment(""Story: Login to CURA system"")",Chrome 100.0.4896.127,,,2022-04-19 14:57:57,2022-04-19 14:57:57,0.346s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 100.0.4896.127,,,2022-04-19 14:57:57,2022-04-19 14:57:57,0.011s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.127,,,2022-04-19 14:57:57,2022-04-19 14:58:07,9.664s,PASSED
+maximizeWindow(),Chrome 100.0.4896.127,,,2022-04-19 14:58:07,2022-04-19 14:58:07,0.131s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 100.0.4896.127,,,2022-04-19 14:58:07,2022-04-19 14:58:08,0.799s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Chrome 100.0.4896.127,,,2022-04-19 14:58:08,2022-04-19 14:58:09,0.936s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Chrome 100.0.4896.127,,,2022-04-19 14:58:09,2022-04-19 14:58:09,0.469s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Chrome 100.0.4896.127,,,2022-04-19 14:58:09,2022-04-19 14:58:09,0.222s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Chrome 100.0.4896.127,,,2022-04-19 14:58:09,2022-04-19 14:58:10,0.536s,PASSED
+"comment(""When he logins to CURA system"")",Chrome 100.0.4896.127,,,2022-04-19 14:58:10,2022-04-19 14:58:10,0.011s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 100.0.4896.127,,,2022-04-19 14:58:10,2022-04-19 14:58:11,0.864s,PASSED
+"comment(""Then he should be able to login successfully"")",Chrome 100.0.4896.127,,,2022-04-19 14:58:11,2022-04-19 14:58:11,0.003s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Chrome 100.0.4896.127,,,2022-04-19 14:58:11,2022-04-19 14:58:11,0.226s,PASSED
+closeBrowser(),Chrome 100.0.4896.127,,,2022-04-19 14:58:11,2022-04-19 14:58:12,1.188s,PASSED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.127,,,2022-04-19 14:58:12,2022-04-19 14:58:12,0.144s,PASSED
+Video,Chrome 100.0.4896.127,,,2022-04-19 14:58:14,2022-04-19 14:58:14,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Chrome 100.0.4896.127,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-19 14:58:14,2022-04-19 14:58:29,14.249s,FAILED
+"comment(""Story: Book an appointment"")",Chrome 100.0.4896.127,,,2022-04-19 14:58:16,2022-04-19 14:58:16,0.003s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 100.0.4896.127,,,2022-04-19 14:58:16,2022-04-19 14:58:16,0.003s,PASSED
+openBrowser(G_SiteURL),Chrome 100.0.4896.127,,,2022-04-19 14:58:16,2022-04-19 14:58:22,6.391s,PASSED
+maximizeWindow(),Chrome 100.0.4896.127,,,2022-04-19 14:58:22,2022-04-19 14:58:22,0.120s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Chrome 100.0.4896.127,,,2022-04-19 14:58:22,2022-04-19 14:58:26,3.711s,PASSED
+"comment(""And Appointment page is displayed"")",Chrome 100.0.4896.127,,,2022-04-19 14:58:26,2022-04-19 14:58:26,0.004s,PASSED
+"takeElementScreenshotAsCheckpoint(""Appointment Dialog Origin"", AppointmentDialogObject)",Chrome 100.0.4896.127,,,2022-04-19 14:58:26,2022-04-19 14:58:26,0.435s,FAILED
+Start listener action : terminateRunningWebDrivers,Chrome 100.0.4896.127,,,2022-04-19 14:58:26,2022-04-19 14:58:27,0.172s,PASSED
+Video,Chrome 100.0.4896.127,,,2022-04-19 14:58:29,2022-04-19 14:58:29,0.001s,PASSED

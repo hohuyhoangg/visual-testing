@@ -1,0 +1,68 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest_With TestOps Vision,Edge Chromium 100,,,2022-04-19 14:56:32,2022-04-19 14:57:27,55.076s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login_With TestOps Vision,Edge Chromium 100,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2022-04-19 14:56:33,2022-04-19 14:56:56,23.243s,PASSED
+"comment(""Story: Login to CURA system"")",Edge Chromium 100,,,2022-04-19 14:56:35,2022-04-19 14:56:35,0.156s,PASSED
+"comment(""Given that the user has the valid login information"")",Edge Chromium 100,,,2022-04-19 14:56:35,2022-04-19 14:56:35,0.008s,PASSED
+openBrowser(G_SiteURL),Edge Chromium 100,,,2022-04-19 14:56:35,2022-04-19 14:56:47,11.509s,PASSED
+maximizeWindow(),Edge Chromium 100,,,2022-04-19 14:56:47,2022-04-19 14:56:47,0.675s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Edge Chromium 100,,,2022-04-19 14:56:47,2022-04-19 14:56:48,0.718s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog Origin"", LoginObject)",Edge Chromium 100,,,2022-04-19 14:56:48,2022-04-19 14:56:50,1.693s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Edge Chromium 100,,,2022-04-19 14:56:50,2022-04-19 14:56:50,0.622s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Edge Chromium 100,,,2022-04-19 14:56:50,2022-04-19 14:56:51,0.342s,PASSED
+"takeElementScreenshotAsCheckpoint(""Login Dialog With Data"", LoginObject)",Edge Chromium 100,,,2022-04-19 14:56:51,2022-04-19 14:56:52,1.276s,PASSED
+"comment(""When he logins to CURA system"")",Edge Chromium 100,,,2022-04-19 14:56:52,2022-04-19 14:56:52,0.003s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Edge Chromium 100,,,2022-04-19 14:56:52,2022-04-19 14:56:53,0.749s,PASSED
+"comment(""Then he should be able to login successfully"")",Edge Chromium 100,,,2022-04-19 14:56:53,2022-04-19 14:56:53,0.009s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Edge Chromium 100,,,2022-04-19 14:56:53,2022-04-19 14:56:53,0.268s,PASSED
+closeBrowser(),Edge Chromium 100,,,2022-04-19 14:56:53,2022-04-19 14:56:54,1.353s,PASSED
+Start listener action : terminateRunningWebDrivers,Edge Chromium 100,,,2022-04-19 14:56:54,2022-04-19 14:56:54,0.098s,PASSED
+Video,Edge Chromium 100,,,2022-04-19 14:56:56,2022-04-19 14:56:56,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment_With TestOps Vision,Edge Chromium 100,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2022-04-19 14:56:56,2022-04-19 14:57:27,30.822s,PASSED
+"comment(""Story: Book an appointment"")",Edge Chromium 100,,,2022-04-19 14:56:57,2022-04-19 14:56:57,0.004s,PASSED
+"comment(""Given that the user has logged into their account"")",Edge Chromium 100,,,2022-04-19 14:56:57,2022-04-19 14:56:57,0.003s,PASSED
+openBrowser(G_SiteURL),Edge Chromium 100,,,2022-04-19 14:56:57,2022-04-19 14:57:05,7.281s,PASSED
+maximizeWindow(),Edge Chromium 100,,,2022-04-19 14:57:05,2022-04-19 14:57:05,0.202s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Edge Chromium 100,,,2022-04-19 14:57:05,2022-04-19 14:57:09,3.936s,PASSED
+"comment(""And Appointment page is displayed"")",Edge Chromium 100,,,2022-04-19 14:57:09,2022-04-19 14:57:09,0.006s,PASSED
+"takeElementScreenshotAsCheckpoint(""Appointment Dialog Origin"", AppointmentDialogObject)",Edge Chromium 100,,,2022-04-19 14:57:09,2022-04-19 14:57:10,1.510s,PASSED
+"selectOptionByLabel(findTestObject(""Page_CuraAppointment/lst_Facility""), ""Hongkong CURA Healthcare Center"", false)",Edge Chromium 100,,,2022-04-19 14:57:10,2022-04-19 14:57:11,0.527s,PASSED
+"takeElementScreenshotAsCheckpoint(""Facilty"", FacilityObject)",Edge Chromium 100,,,2022-04-19 14:57:11,2022-04-19 14:57:11,0.732s,PASSED
+"check(findTestObject(""Page_CuraAppointment/chk_Medicaid""))",Edge Chromium 100,,,2022-04-19 14:57:11,2022-04-19 14:57:12,0.402s,PASSED
+"takeElementScreenshotAsCheckpoint(""Medicare"", MedicareChoicesObject)",Edge Chromium 100,,,2022-04-19 14:57:12,2022-04-19 14:57:13,0.694s,PASSED
+"check(findTestObject(""Page_CuraAppointment/chk_Readmission""))",Edge Chromium 100,,,2022-04-19 14:57:13,2022-04-19 14:57:13,0.191s,PASSED
+"setText(findTestObject(""Page_CuraAppointment/txt_VisitDate""), ""27/12/2016"")",Edge Chromium 100,,,2022-04-19 14:57:13,2022-04-19 14:57:14,0.800s,PASSED
+click(CommentLabelObject),Edge Chromium 100,,,2022-04-19 14:57:14,2022-04-19 14:57:14,0.142s,PASSED
+"takeElementScreenshotAsCheckpoint(""Visit Date"", DateObject)",Edge Chromium 100,,,2022-04-19 14:57:14,2022-04-19 14:57:14,0.794s,PASSED
+"setText(findTestObject(""Page_CuraAppointment/txt_Comment""), ""Please make appointment as soon as possible."")",Edge Chromium 100,,,2022-04-19 14:57:14,2022-04-19 14:57:15,0.301s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Edge Chromium 100,,,2022-04-19 14:57:15,2022-04-19 14:57:15,0.004s,PASSED
+"takeElementScreenshotAsCheckpoint(""Appointment Dialog With Data"", AppointmentDialogObject)",Edge Chromium 100,,,2022-04-19 14:57:15,2022-04-19 14:57:16,0.853s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Edge Chromium 100,,,2022-04-19 14:57:16,2022-04-19 14:57:16,0.630s,PASSED
+"takeFullPageScreenshotAsCheckpoint(""Review Appoitment"")",Edge Chromium 100,,,2022-04-19 14:57:16,2022-04-19 14:57:23,6.342s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.126s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.005s,PASSED
+"verifyMatch(""Hongkong CURA Healthcare Center"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Facility"")), false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.142s,PASSED
+"verifyMatch(""Yes"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_HospitalReadmission"")), false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.353s,PASSED
+"verifyMatch(""Medicaid"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Program"")), false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.112s,PASSED
+"verifyMatch(""27/12/2016"", getText(findTestObject(""Page_AppointmentConfirmation/lbl_VisitDate"")), false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:23,0.144s,PASSED
+"verifyMatch(""Please make appointment as soon as possible."", getText(findTestObject(""Page_AppointmentConfirmation/lbl_Comment"")), false)",Edge Chromium 100,,,2022-04-19 14:57:23,2022-04-19 14:57:24,0.237s,PASSED
+closeBrowser(),Edge Chromium 100,,,2022-04-19 14:57:24,2022-04-19 14:57:25,1.342s,PASSED
+Start listener action : terminateRunningWebDrivers,Edge Chromium 100,,,2022-04-19 14:57:25,2022-04-19 14:57:25,0.101s,PASSED
+Video,Edge Chromium 100,,,2022-04-19 14:57:27,2022-04-19 14:57:27,0.000s,PASSED
